@@ -1,0 +1,4 @@
+EmailID*,LoginPassword*,FirstName*,LastName*,ContactNo*,IsCompany*,CompanyID*,PlanStartDate*,PlanExpiryDate*,AccountStatus*,Address,City,State,Country,branchs,departments,roles
+john.doe@company.com,SecurePass123,John,Doe,9876543210,1,,01/01/2024,31/12/2024,1,123 Business Street,707,10,101,515,286,162
+jane.smith@company.com,MyPassword456,Jane,Smith,9876543211,0,68d16e8ef7e35a47723c0480,01/01/2024,31/12/2024,1,456 Corporate Ave,707,10,101,515,286,162
+mike.johnson@company.com,StrongPass789,Mike,Johnson,9876543212,1,,01/01/2024,31/12/2024,1,789 Office Plaza,707,10,101,515,286,162

@@ -1,0 +1,303 @@
+/* Super Admin Login Styles */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('https://uspeeknow.com/img/works_bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.login-background {
+  position: relative;
+  background: linear-gradient(135deg, rgba(0, 150, 136, 0.9) 0%, rgba(3, 169, 244, 0.9) 100%);
+  border-radius: 12px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 48px 40px 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  max-width: 400px;
+  width: 100%;
+}
+
+.login-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.login-avatar {
+  width: 64px;
+  height: 64px;
+  background: #1976d2;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(25, 118, 210, 0.3);
+}
+
+.login-icon {
+  width: 28px;
+  height: 28px;
+  fill: white;
+}
+
+.login-form {
+  width: 100%;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #fff3cd;
+  border: 1px solid #ffeaa7;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  color: #856404;
+  font-size: 14px;
+  position: relative;
+}
+
+.error-icon {
+  font-size: 16px;
+}
+
+.reset-button {
+  position: absolute;
+  right: 12px;
+  background: #f39c12;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.reset-button:hover {
+  background: #e67e22;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8px;
+  transition: color 0.2s;
+}
+
+.form-label:hover {
+  color: #1976d2;
+}
+
+.required {
+  color: #dc3545;
+  margin-left: 2px;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #1976d2;
+  box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.1);
+}
+
+.form-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.form-input::placeholder {
+  color: #999;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 14px 20px;
+  background: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.submit-button:hover:not(:disabled) {
+  background: #1565c0;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(25, 118, 210, 0.3);
+}
+
+.submit-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.submit-button:disabled:hover {
+  background: #ccc;
+  transform: none;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: ۱۶px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.security-info {
+  text-align: center;
+  color: #666;
+  font-size: 13px;
+}
+
+.attempts-counter {
+  margin-bottom: 8px;
+  padding: 6px 12px;
+  background: rgba(220, 53, 69, 0.1);
+  border-radius: 6px;
+  color: #dc3545;
+  display: inline-block;
+}
+
+.security-note {
+  color: #28a745;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 20px;
+  }
+  
+  .login-background {
+    padding: 20px;
+  }
+  
+  .login-card {
+    padding: 32px 24px 24px;
+  }
+  
+  .form-input {
+    font-size: 16px; /* Prevent zoom on iOS */
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .login-card {
+    background: rgba(45, 45, 45, 0.95);
+    color: #fff;
+  }
+  
+  .form-label {
+    color: #ddd;
+  }
+  
+  .form-input {
+    background: #333;
+    border-color: #555;
+    color: #fff;
+  }
+  
+  .form-input:focus {
+    border-color: #1976d2;
+    background: #333;
+  }
+  
+  .form-input:disabled {
+    background: #222;
+    opacity: 0.7;
+  }
+  
+  .submit-button:disabled {
+    background: #666;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .submit-button,
+  .form-input,
+  .spinner {
+    transition: none;
+    animation: none;
+  }
+  
+  .spinner {
+    animation: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .login-card {
+    border: 2px solid #000;
+  }
+  
+  .form-input {
+    border: 2px solid #000;
+  }
+  
+  .submit-button {
+    border: 2px solid #000;
+  }
+}

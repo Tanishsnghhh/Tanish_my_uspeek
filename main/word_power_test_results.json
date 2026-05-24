@@ -1,0 +1,101 @@
+{
+  "sentiment_analysis": {
+    "overall_sentiment": "positive",
+    "positive_score": 100.0,
+    "negative_score": 0.0,
+    "neutral_score": 0.0,
+    "confidence": 100.0
+  },
+  "content_assessment": {
+    "quality_score": 81.9,
+    "vocabulary_diversity": 68.8,
+    "clarity_score": 100.0,
+    "complexity_level": "Basic",
+    "overall_strength": 80.9,
+    "strength_level": "Excellent",
+    "strength_description": "Your content shows strength in 2 areas, particularly vocabulary.",
+    "top_strength": "Vocabulary",
+    "key_improvement": "Content Length",
+    "filler_words_percentage": 0.5,
+    "avg_words_per_sentence": 11.6,
+    "word_count": 198,
+    "vocabulary_score": 68.8,
+    "vocabulary_description": "Good vocabulary range with 137 unique words. Consider expanding word variety for even better impact.",
+    "content_length_score": 66.0,
+    "content_length_description": "Moderate content length with 198 words. Consider expanding key points for better depth.",
+    "fluency_score": 100,
+    "fluency_description": "Excellent speaking fluency with minimal filler words. Very clear and confident delivery.",
+    "flow_description": "Flow needs improvement. Add transition words like 'however', 'therefore', 'furthermore' to connect ideas better.",
+    "word_power_score": 3.4,
+    "word_power_percentage": 68.0
+  },
+  "strengths_improvements": {
+    "strengths": [
+      {
+        "area": "Vocabulary",
+        "description": "Strong vocabulary diversity with 68.8% unique words",
+        "score": 100
+      },
+      {
+        "area": "Fluency",
+        "description": "Excellent speaking fluency with minimal filler words",
+        "score": 100
+      }
+    ],
+    "improvements": [
+      {
+        "area": "Content Length",
+        "description": "Consider adding approximately 102 more words for better depth",
+        "score": 66.0
+      },
+      {
+        "area": "Flow & Cohesion",
+        "description": "Add more transition words to improve flow between ideas",
+        "score": 0.0
+      }
+    ],
+    "strength_score": 80.9,
+    "improvement_areas_score": 70,
+    "detailed_metrics": {
+      "length_score": 66.0,
+      "vocabulary_score": 100,
+      "unique_word_ratio": 68.8,
+      "fluency_score": 100,
+      "filler_word_percentage": 0.51,
+      "sentence_score": 83.9,
+      "avg_sentence_length": 11.6,
+      "sentence_count": 17,
+      "transition_score": 0.0,
+      "transition_word_count": 0
+    }
+  },
+  "emotion_analysis": {
+    "dominant_emotion": "Trust",
+    "emoji": "\ud83e\udd1d",
+    "confidence": 50.0,
+    "emotion_scores": {
+      "Joy / Happiness": 0,
+      "Sadness": 0,
+      "Anger": 0,
+      "Fear": 0,
+      "Surprise": 0,
+      "Disgust": 0,
+      "Trust": 1,
+      "Anticipation": 0,
+      "Love": 0,
+      "Optimism": 1,
+      "Pessimism": 0,
+      "Neutral": 0
+    },
+    "detected_keywords": [
+      [
+        "Trust",
+        "confident"
+      ],
+      [
+        "Optimism",
+        "confident"
+      ]
+    ]
+  }
+}

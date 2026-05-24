@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U-Speak Video Analysis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .upload-form {
+            text-align: center;
+            margin: 20px 0;
+        }
+        input[type="file"] {
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px dashed #ccc;
+            border-radius: 5px;
+            width: 100%;
+            max-width: 400px;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        #results {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            display: none;
+        }
+        .loading {
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>U-Speak Video Analysis System</h1>
+        
+        <form id="uploadForm" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="upload-form">
+                <input type="file" id="videoFile" name="video" accept="video/*" required>
+                <br><br>
+                <button type="submit">Analyze Video</button>
+            </div>
+        </form>
+        
+        <div id="results">
+            <h2>Analysis Results</h2>
+            <div id="analysisContent"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData();
+            const fileInput = document.getElementById('videoFile');
+            const resultsDiv = document.getElementById('results');
+            const analysisContent = document.getElementById('analysisContent');
+            
+            if (!fileInput.files[0]) {
+                alert('Please select a video file first.');
+                return;
+            }
+            
+            formData.append('video', fileInput.files[0]);
+            
+            // Show loading state
+            resultsDiv.style.display = 'block';
+            analysisContent.innerHTML = '<div class="loading">Analyzing video... This may take a few minutes.</div>';
+            
+            try {
+                const response = await fetch('/api/analyze-video/', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value
+                    }
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    analysisContent.innerHTML = `
+                        <h3>✅ Analysis Complete!</h3>
+                        <pre>${JSON.stringify(data, null, 2)}</pre>
+                    `;
+                } else {
+                    analysisContent.innerHTML = `
+                        <h3>❌ Analysis Failed</h3>
+                        <p>Error: ${data.error || 'Unknown error occurred'}</p>
+                    `;
+                }
+            } catch (error) {
+                analysisContent.innerHTML = `
+                    <h3>❌ Network Error</h3>
+                    <p>Error: ${error.message}</p>
+                `;
+            }
+        });
+    </script>
+</body>
+</html>

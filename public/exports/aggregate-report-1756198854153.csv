@@ -1,0 +1,13 @@
+# Aggregate Report Export
+# Generated: 2025-08-26T09:00:54.154Z
+# Window: 2024-01-01 to 2024-12-31
+# Grouped By: durgapur / Communication Skills
+
+Group Value,Headcount,Average Score,Lessons Completed,Time Spent (minutes),Videos Uploaded,Improvement Delta
+"Good",1,"N/A",0,0,0,"N/A"
+"Needs Improvement",1,"N/A",0,0,0,"N/A"
+"Average",1,"N/A",0,0,0,"N/A"
+"mumbai",1,"N/A",0,0,0,"N/A"
+"bangalore",1,"N/A",0,0,0,"N/A"
+"kolkata",2,"N/A",0,0,0,"N/A"
+"durgapur",1,"N/A",0,0,0,"N/A"

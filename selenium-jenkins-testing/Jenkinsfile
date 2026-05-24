@@ -1,0 +1,39 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Install Dependencies') {
+            steps {
+                script {
+                    // Install npm dependencies
+                    sh 'npm install'
+                }
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                script {
+                    // Run login and signup tests
+                    sh 'npm test'
+                }
+            }
+        }
+
+        stage('Report Results') {
+            steps {
+                script {
+                    // Archive test results
+                    junit 'tests/**/*.xml'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            // Clean up workspace
+            cleanWs()
+        }
+    }
+}

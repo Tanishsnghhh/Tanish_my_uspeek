@@ -1,0 +1,150 @@
+{
+  "test_metadata": {
+    "text_length": 8000,
+    "analysis_type": "comprehensive_word_power",
+    "timestamp": "2025-09-02"
+  },
+  "results": {
+    "sentiment_analysis": {
+      "overall_sentiment": "positive",
+      "positive_score": 60.6,
+      "negative_score": 39.4,
+      "neutral_score": 0.0,
+      "confidence": 60.6
+    },
+    "content_assessment": {
+      "quality_score": 90.5,
+      "vocabulary_diversity": 38.1,
+      "clarity_score": 100.0,
+      "complexity_level": "Basic",
+      "overall_strength": 84.5,
+      "strength_level": "Excellent",
+      "strength_description": "Your content demonstrates 3 key strengths including excellent content length.",
+      "top_strength": "Content Length",
+      "key_improvement": "Vocabulary",
+      "filler_words_percentage": 0.1,
+      "avg_words_per_sentence": 14.4,
+      "word_count": 1010,
+      "vocabulary_score": 38.1,
+      "vocabulary_description": "Limited vocabulary variety with 387 unique words. Focus on using more diverse word choices.",
+      "content_length_score": 100,
+      "content_length_description": "Ideal content length with 1010 words providing comprehensive coverage.",
+      "fluency_score": 100,
+      "fluency_description": "Excellent speaking fluency with minimal filler words. Very clear and confident delivery.",
+      "flow_description": "Flow needs improvement. Add transition words like 'however', 'therefore', 'furthermore' to connect ideas better.",
+      "word_power_score": 1.9,
+      "word_power_percentage": 38.0
+    },
+    "strengths_improvements": {
+      "strengths": [
+        {
+          "area": "Content Length",
+          "description": "Good content length with 1010 words",
+          "score": 100
+        },
+        {
+          "area": "Fluency",
+          "description": "Excellent speaking fluency with minimal filler words",
+          "score": 100
+        },
+        {
+          "area": "Sentence Structure",
+          "description": "Well-balanced sentences averaging 14.4 words each",
+          "score": 100
+        }
+      ],
+      "improvements": [
+        {
+          "area": "Vocabulary",
+          "description": "Aim for at least 40% unique words (currently 38.1%)",
+          "score": 78.1
+        },
+        {
+          "area": "Flow & Cohesion",
+          "description": "Add more transition words to improve flow between ideas",
+          "score": 0.0
+        }
+      ],
+      "strength_score": 84.5,
+      "improvement_areas_score": 70,
+      "detailed_metrics": {
+        "length_score": 100,
+        "vocabulary_score": 78.1,
+        "unique_word_ratio": 38.1,
+        "fluency_score": 100,
+        "filler_word_percentage": 0.1,
+        "sentence_score": 100,
+        "avg_sentence_length": 14.4,
+        "sentence_count": 70,
+        "transition_score": 0.0,
+        "transition_word_count": 0
+      }
+    },
+    "emotion_analysis": {
+      "dominant_emotion": "Optimism",
+      "emoji": "🌟",
+      "confidence": 50.0,
+      "emotion_scores": {
+        "Joy / Happiness": 1,
+        "Sadness": 0,
+        "Anger": 0,
+        "Fear": 0,
+        "Surprise": 0,
+        "Disgust": 0,
+        "Trust": 1,
+        "Anticipation": 2,
+        "Love": 0,
+        "Optimism": 5,
+        "Pessimism": 1,
+        "Neutral": 4
+      },
+      "detected_keywords": [
+        [
+          "Joy / Happiness",
+          "excited"
+        ],
+        [
+          "Trust",
+          "trust"
+        ],
+        [
+          "Anticipation",
+          "interested"
+        ],
+        [
+          "Anticipation",
+          "excited"
+        ],
+        [
+          "Optimism",
+          "positive"
+        ],
+        [
+          "Optimism",
+          "positive"
+        ],
+        [
+          "Optimism",
+          "positive"
+        ],
+        [
+          "Optimism",
+          "encouraging"
+        ],
+        [
+          "Optimism",
+          "constructive"
+        ],
+        [
+          "Pessimism",
+          "negative"
+        ]
+      ]
+    }
+  },
+  "performance": {
+    "category": "Poor",
+    "emoji": "📉",
+    "feedback": "Poor word power, requires extensive practice and development"
+  }
+}

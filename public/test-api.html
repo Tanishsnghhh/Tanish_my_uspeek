@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Reporting API</title>
+</head>
+<body>
+    <h1>USpeak Pro Reporting API Test</h1>
+    
+    <div id="results">
+        <h2>Testing API Connection...</h2>
+    </div>
+
+    <script>
+        async function testAPI() {
+            const resultsDiv = document.getElementById('results');
+            
+            try {
+                // Generate a test token
+                const testToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjb3Jwb3JhdGVBY2NvdW50SWQiOiI2NmE5ZjEyM2I0NTZjNzg5MDEyMzQ1ZGUiLCJyb2xlIjoiYWRtaW4iLCJ1c2VySWQiOiJ0ZXN0X3VzZXJfMTIzIiwiaWF0IjoxNzM1MTk5NzI4LCJleHAiOjE3MzUyMDMzMjh9.EzGt8NQrH6LTdB-4F2MbLQ9J7XiHhOVQXBVD-BzlIkE';
+                
+                resultsDiv.innerHTML += '<h3>Testing Attributes API...</h3>';
+                
+                const response = await fetch('/api/reports/definitions/attributes?accountId=66a9f123b456c789012345de', {
+                    headers: {
+                        'Authorization': `Bearer ${testToken}`
+                    }
+                });
+                
+                const data = await response.json();
+                
+                resultsDiv.innerHTML += `
+                    <p><strong>Status:</strong> ${response.status}</p>
+                    <p><strong>Response:</strong></p>
+                    <pre>${JSON.stringify(data, null, 2)}</pre>
+                `;
+                
+                if (data.attributes && data.attributes.length > 0) {
+                    resultsDiv.innerHTML += '<h3>✅ Attributes found! Testing aggregate API...</h3>';
+                    
+                    const aggregateResponse = await fetch('/api/reports/aggregate', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${testToken}`
+                        },
+                        body: JSON.stringify({
+                            start: '2024-01-01',
+                            end: '2024-12-31',
+                            groupBy: 'position1'
+                        })
+                    });
+                    
+                    const aggregateData = await aggregateResponse.json();
+                    
+                    resultsDiv.innerHTML += `
+                        <p><strong>Aggregate Status:</strong> ${aggregateResponse.status}</p>
+                        <p><strong>Aggregate Response:</strong></p>
+                        <pre>${JSON.stringify(aggregateData, null, 2)}</pre>
+                    `;
+                } else {
+                    resultsDiv.innerHTML += '<h3>❌ No attributes found</h3>';
+                }
+                
+            } catch (error) {
+                resultsDiv.innerHTML += `<p style="color: red;">Error: ${error.message}</p>`;
+            }
+        }
+        
+        // Run test when page loads
+        testAPI();
+    </script>
+</body>
+</html>
