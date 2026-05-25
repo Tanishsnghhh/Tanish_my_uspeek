@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="USpeak Selenium Test Suite">
+    <!-- Note: This TestNG XML file is a placeholder. 
+         Your current tests are written in JavaScript (Node.js) using 'node:test', not Java TestNG.
+    -->
+    <test name="Authentication Tests">
+        <classes>
+            <!-- Java class examples -->
+            <class name="com.uspeek.tests.LoginTest"/>
+            <class name="com.uspeek.tests.SignupTest"/>
+        </classes>
+    </test>
+</suite>

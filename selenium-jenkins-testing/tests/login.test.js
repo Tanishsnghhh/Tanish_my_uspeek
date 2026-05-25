@@ -1,4 +1,5 @@
 const { Builder, By, until, Key } = require('selenium-webdriver');
+const chrome = require('selenium-webdriver/chrome');
 const assert = require('assert');
 const { describe, it, before, after } = require('node:test');
 
@@ -6,7 +7,14 @@ describe('Corporate Employee Login Tests', function() {
     let driver;
 
     before(async function() {
-        driver = await new Builder().forBrowser('chrome').build();
+        // Explicitly set headless to false (which runs it in visible browser mode)
+        const options = new chrome.Options();
+        // options.addArguments('--headless'); // Headless is disabled
+        
+        driver = await new Builder()
+            .forBrowser('chrome')
+            .setChromeOptions(options)
+            .build();
     });
 
     after(async function() {

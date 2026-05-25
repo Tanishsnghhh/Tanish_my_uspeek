@@ -1,30 +1,53 @@
 pipeline {
     agent any
 
+    environment {
+        // Automatically set the path where Jenkins will look for node/npm
+        PATH = "/usr/local/bin:/usr/bin:/bin:${env.PATH}"
+    }
+
     stages {
+        stage('Checkout') {
+            steps {
+                // Jenkins automatically checks out the code from the Git repository configured in the UI
+                checkout scm
+            }
+        }
+        
         stage('Install Dependencies') {
             steps {
-                script {
-                    // Install npm dependencies
+                dir('selenium-jenkins-testing') {
+                    echo 'Installing packages...'
                     sh 'npm install'
                 }
             }
         }
-
-        stage('Run Tests') {
+        
+        stage('Start Dev Server') {
             steps {
-                script {
-                    // Run login and signup tests
-                    sh 'npm test'
+                echo 'Starting Next.js Server in background...'
+                // You must start the server so localhost:3000 actually works in the pipeline
+                sh 'nohup npm run dev > server.log 2>&1 &'
+                
+                // Wait for the server to spin up
+                sleep time: 10, unit: 'SECONDS'
+            }
+        }
+        
+        stage('Run Selenium Tests: Login') {
+            steps {
+                dir('selenium-jenkins-testing') {
+                    echo 'Running Login Tests...'
+                    sh 'npm run test:login'
                 }
             }
         }
 
-        stage('Report Results') {
+        stage('Run Selenium Tests: Signup') {
             steps {
-                script {
-                    // Archive test results
-                    junit 'tests/**/*.xml'
+                dir('selenium-jenkins-testing') {
+                    echo 'Running Signup Tests...'
+                    sh 'npm run test:signup'
                 }
             }
         }
@@ -32,8 +55,15 @@ pipeline {
 
     post {
         always {
-            // Clean up workspace
-            cleanWs()
+            // Kill the Next.js server so it doesn't stay running forever and block the port
+            echo 'Shutting down Next.js Server...'
+            sh "pkill -f 'next dev' || true"
+        }
+        success {
+            echo '✅ All tests passed successfully!'
+        }
+        failure {
+            echo '❌ Tests failed. Please check the logs.'
         }
     }
 }
