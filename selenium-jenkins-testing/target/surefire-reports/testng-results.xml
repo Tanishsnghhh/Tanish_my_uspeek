@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-05-25T11:03:01 IST" name="USpeak Selenium Test Suite" finished-at="2026-05-25T11:03:54 IST" duration-ms="52229">
+    <groups>
+    </groups>
+    <test started-at="2026-05-25T11:03:01 IST" name="Authentication Tests" finished-at="2026-05-25T11:03:54 IST" duration-ms="52229">
+      <class name="com.uspeek.tests.SignupTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.uspeek.tests.SignupTest@60704c]" started-at="2026-05-25T11:03:01 IST" name="setup" finished-at="2026-05-25T11:03:06 IST" duration-ms="4229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="createCorporateAccountSuccessfully()[pri:0, instance:com.uspeek.tests.SignupTest@60704c]" started-at="2026-05-25T11:03:06 IST" name="createCorporateAccountSuccessfully" finished-at="2026-05-25T11:03:41 IST" duration-ms="35207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createCorporateAccountSuccessfully -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.uspeek.tests.SignupTest@60704c]" started-at="2026-05-25T11:03:41 IST" name="teardown" finished-at="2026-05-25T11:03:41 IST" duration-ms="130" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.uspeek.tests.SignupTest -->
+      <class name="com.uspeek.tests.LoginTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.uspeek.tests.LoginTest@7f1302d6]" started-at="2026-05-25T11:03:41 IST" name="setup" finished-at="2026-05-25T11:03:44 IST" duration-ms="2531" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginSuccessfully()[pri:0, instance:com.uspeek.tests.LoginTest@7f1302d6]" started-at="2026-05-25T11:03:44 IST" name="loginSuccessfully" finished-at="2026-05-25T11:03:54 IST" duration-ms="9999" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSuccessfully -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.uspeek.tests.LoginTest@7f1302d6]" started-at="2026-05-25T11:03:54 IST" name="teardown" finished-at="2026-05-25T11:03:54 IST" duration-ms="108" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.uspeek.tests.LoginTest -->
+    </test> <!-- Authentication Tests -->
+  </suite> <!-- USpeak Selenium Test Suite -->
+</testng-results>

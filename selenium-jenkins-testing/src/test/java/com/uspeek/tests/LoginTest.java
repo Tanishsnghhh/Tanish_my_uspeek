@@ -48,14 +48,12 @@ public class LoginTest {
 
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("dashboard") || currentUrl.contains("profile"), "Did not redirect to dashboard/profile");
-        
-        Thread.sleep(1000000); // Leave it open manually to observe
     }
 
-    // @AfterClass
-    // public void teardown() {
-    //    if (driver != null) {
-    //        driver.quit();
-    //    }
-    // }
+    @AfterClass
+    public void teardown() {
+       if (driver != null) {
+           driver.quit();
+       }
+    }
 }
