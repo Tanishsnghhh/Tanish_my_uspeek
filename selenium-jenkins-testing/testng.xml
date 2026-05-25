@@ -4,11 +4,12 @@
     <!-- Note: This TestNG XML file is a placeholder. 
          Your current tests are written in JavaScript (Node.js) using 'node:test', not Java TestNG.
     -->
-    <test name="Authentication Tests">
+    <test name="Authentication Tests" preserve-order="true">
         <classes>
-            <!-- Java class examples -->
-            <class name="com.uspeek.tests.LoginTest"/>
+            <!-- Start with Signup test -->
             <class name="com.uspeek.tests.SignupTest"/>
+            <!-- Run Login secondary, although Signup test already logs in -->
+            <class name="com.uspeek.tests.LoginTest"/>
         </classes>
     </test>
 </suite>
