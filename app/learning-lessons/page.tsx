@@ -204,10 +204,13 @@ export default function LearningLessonsPage() {
   } | null>(null);
 
   // Redirect admins away from learning lessons (employee-only feature)
+  // TEMPORARILY DISABLED for Testing: allow login simulation testing
   useEffect(() => {
+    /*
     if (user && (user.role === 'ADMIN' || user.role === 'CORPORATE_ADMIN')) {
       router.push('/dashboard');
     }
+    */
   }, [user, router]);
 
   useEffect(() => {
@@ -249,9 +252,12 @@ export default function LearningLessonsPage() {
   }, [token, isAuthenticated]);
 
   // If user is admin, don't render anything (moved after hooks)
+  // TEMPORARILY DISABLED: Allow admins to view Learning Lessons for testing purposes
+  /*
   if (user && (user.role === 'ADMIN' || user.role === 'CORPORATE_ADMIN')) {
     return null;
   }
+  */
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
