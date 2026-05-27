@@ -210,11 +210,6 @@ export default function LearningLessonsPage() {
     }
   }, [user, router]);
 
-  // If user is admin, don't render anything
-  if (user && (user.role === 'ADMIN' || user.role === 'CORPORATE_ADMIN')) {
-    return null;
-  }
-
   useEffect(() => {
     // Format dates on the client side to avoid hydration mismatch
     const dates: Record<string, string> = {};
@@ -252,6 +247,11 @@ export default function LearningLessonsPage() {
 
     fetchVideoProgress();
   }, [token, isAuthenticated]);
+
+  // If user is admin, don't render anything (moved after hooks)
+  if (user && (user.role === 'ADMIN' || user.role === 'CORPORATE_ADMIN')) {
+    return null;
+  }
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
