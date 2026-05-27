@@ -39,7 +39,7 @@ public class LearningLessonsUITest {
     @Test
     public void testLearningLessonsNavigation() throws Exception {
         driver.get("http://localhost:3000/learning-lessons");
-        Thread.sleep(3000); // Visual wait
+        Thread.sleep(8000); // Increased visual wait
         
         System.out.println("Navigated to learning lessons successfully. URL: " + driver.getCurrentUrl());
         Assert.assertTrue(driver.getCurrentUrl().contains("learning-lessons"), "Not on learning lessons page");

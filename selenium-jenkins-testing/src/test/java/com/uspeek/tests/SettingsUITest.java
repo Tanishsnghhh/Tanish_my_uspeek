@@ -39,7 +39,7 @@ public class SettingsUITest {
     @Test
     public void testSettingsNavigation() throws Exception {
         driver.get("http://localhost:3000/settings");
-        Thread.sleep(3000); // Visual wait
+        Thread.sleep(8000); // Visual wait
         
         System.out.println("Navigated to settings successfully. URL: " + driver.getCurrentUrl());
         Assert.assertTrue(driver.getCurrentUrl().contains("settings"), "Not on settings page");

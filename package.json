@@ -27,7 +27,9 @@
     "clean:install": "npm run clean && npm install && npm run setup:backend",
     "docker:up": "docker-compose up -d",
     "docker:down": "docker-compose down",
-    "docker:logs": "docker-compose logs -f"
+    "docker:logs": "docker-compose logs -f",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run"
   },
   "dependencies": {
     "@google-cloud/speech": "^7.2.0",
@@ -137,6 +139,7 @@
     "@types/html2pdf.js": "^0.10.0",
     "@types/papaparse": "^5.3.16",
     "concurrently": "^8.2.2",
+    "cypress": "^15.15.0",
     "mocha": "^11.7.6",
     "tsx": "^4.20.5"
   }

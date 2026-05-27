@@ -38,8 +38,8 @@ public class ProfileUITest {
     
     @Test
     public void testProfileNavigation() throws Exception {
-        driver.get("http://localhost:3000/employee-profile");
-        Thread.sleep(3000); // Visual wait
+        driver.get("http://localhost:3000/profile");
+        Thread.sleep(8000); // Visual wait
         
         System.out.println("Navigated to profile successfully. URL: " + driver.getCurrentUrl());
         Assert.assertTrue(driver.getCurrentUrl().contains("profile"), "Not on profile page");

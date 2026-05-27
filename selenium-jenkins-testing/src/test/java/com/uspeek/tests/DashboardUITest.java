@@ -40,7 +40,7 @@ public class DashboardUITest {
     @Test
     public void testDashboardNavigation() throws Exception {
         driver.get("http://localhost:3000/dashboard");
-        Thread.sleep(3000); // Visual wait
+        Thread.sleep(8000); // Visual wait
         
         System.out.println("Navigated to dashboard successfully. URL: " + driver.getCurrentUrl());
         Assert.assertTrue(driver.getCurrentUrl().contains("dashboard"), "Not on dashboard page");
