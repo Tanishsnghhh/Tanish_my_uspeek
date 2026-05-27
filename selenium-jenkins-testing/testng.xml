@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Uspeek Test Suite">
-    <test name="Authentication Tests">
+    <test name="All Tests">
         <classes>
             <class name="com.uspeek.tests.SignupTest"/>
             <class name="com.uspeek.tests.LoginTest"/>
-        </classes>
-    </test>
-    
-    <test name="API Tests">
-        <classes>
             <class name="com.uspeek.tests.DatabaseHealthApiTest"/>
             <class name="com.uspeek.tests.ExportDataApiTest"/>
             <class name="com.uspeek.tests.LicensesApiTest"/>
