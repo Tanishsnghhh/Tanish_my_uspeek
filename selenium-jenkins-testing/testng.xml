@@ -5,10 +5,10 @@
         <classes>
             <class name="com.uspeek.tests.SignupTest"/>
             <class name="com.uspeek.tests.LoginTest"/>
-            <class name="com.uspeek.tests.DatabaseHealthApiTest"/>
-            <class name="com.uspeek.tests.ExportDataApiTest"/>
-            <class name="com.uspeek.tests.LicensesApiTest"/>
-            <class name="com.uspeek.tests.LearningProgressApiTest"/>
+            <class name="com.uspeek.tests.DashboardUITest"/>
+            <class name="com.uspeek.tests.SettingsUITest"/>
+            <class name="com.uspeek.tests.LearningLessonsUITest"/>
+            <class name="com.uspeek.tests.ProfileUITest"/>
         </classes>
     </test>
 </suite>
