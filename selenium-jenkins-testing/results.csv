@@ -1,0 +1,36 @@
+timeStamp,elapsed,label,responseCode,responseMessage,threadName,dataType,success,failureMessage,bytes,sentBytes,grpThreads,allThreads,URL,Latency,IdleTime,Connect
+1781358381874,1420,1. Login Request,200,OK,Load Test Thread Group 1-1,text,true,,840,342,5,5,http://localhost:3000/api/auth/login,1415,0,15
+1781358382013,1281,1. Login Request,200,OK,Load Test Thread Group 1-2,text,true,,840,342,5,5,http://localhost:3000/api/auth/login,1276,0,1
+1781358382216,2243,1. Login Request,200,OK,Load Test Thread Group 1-3,text,true,,840,342,5,5,http://localhost:3000/api/auth/login,2243,0,1
+1781358382414,2051,1. Login Request,200,OK,Load Test Thread Group 1-4,text,true,,840,342,5,5,http://localhost:3000/api/auth/login,2051,0,1
+1781358382613,1853,1. Login Request,200,OK,Load Test Thread Group 1-5,text,true,,840,342,5,5,http://localhost:3000/api/auth/login,1853,0,1
+1781358383315,1203,2. GET Profile Data,200,OK,Load Test Thread Group 1-2,text,true,,586,547,5,5,http://localhost:3000/api/user/profile,1203,0,0
+1781358383315,1208,2. GET Profile Data,200,OK,Load Test Thread Group 1-1,text,true,,586,547,5,5,http://localhost:3000/api/user/profile,1208,0,0
+1781358384462,84,2. GET Profile Data,200,OK,Load Test Thread Group 1-3,text,true,,586,547,5,5,http://localhost:3000/api/user/profile,84,0,0
+1781358384466,81,2. GET Profile Data,200,OK,Load Test Thread Group 1-4,text,true,,586,547,5,5,http://localhost:3000/api/user/profile,81,0,0
+1781358384467,81,2. GET Profile Data,200,OK,Load Test Thread Group 1-5,text,true,,586,547,5,5,http://localhost:3000/api/user/profile,81,0,0
+1781358384519,103,3. PUT Update First Name,200,OK,Load Test Thread Group 1-2,text,true,,318,602,5,5,http://localhost:3000/api/user/profile,102,0,0
+1781358384524,104,3. PUT Update First Name,200,OK,Load Test Thread Group 1-1,text,true,,318,602,5,5,http://localhost:3000/api/user/profile,104,0,0
+1781358384547,112,3. PUT Update First Name,200,OK,Load Test Thread Group 1-3,text,true,,318,602,5,5,http://localhost:3000/api/user/profile,111,0,0
+1781358384548,138,3. PUT Update First Name,200,OK,Load Test Thread Group 1-4,text,true,,318,602,5,5,http://localhost:3000/api/user/profile,137,0,0
+1781358384548,140,3. PUT Update First Name,200,OK,Load Test Thread Group 1-5,text,true,,318,602,5,5,http://localhost:3000/api/user/profile,140,0,0
+1781358384622,193,4. GET Database Health,200,OK,Load Test Thread Group 1-2,text,true,,545,550,5,5,http://localhost:3000/api/health/database,193,0,0
+1781358384659,156,4. GET Database Health,200,OK,Load Test Thread Group 1-3,text,true,,545,550,5,5,http://localhost:3000/api/health/database,156,0,0
+1781358384686,130,4. GET Database Health,200,OK,Load Test Thread Group 1-4,text,true,,545,550,5,5,http://localhost:3000/api/health/database,130,0,0
+1781358384629,189,4. GET Database Health,200,OK,Load Test Thread Group 1-1,text,true,,545,550,5,5,http://localhost:3000/api/health/database,189,0,0
+1781358384689,143,4. GET Database Health,200,OK,Load Test Thread Group 1-5,text,true,,545,550,5,5,http://localhost:3000/api/health/database,143,0,0
+1781358384818,319,5. GET Admin Metrics,200,OK,Load Test Thread Group 1-2,text,true,,345,558,5,5,http://localhost:3000/api/dashboard/admin-metrics,319,0,0
+1781358384819,404,5. GET Admin Metrics,200,OK,Load Test Thread Group 1-1,text,true,,345,558,5,5,http://localhost:3000/api/dashboard/admin-metrics,403,0,0
+1781358384817,483,5. GET Admin Metrics,200,OK,Load Test Thread Group 1-3,text,true,,345,558,5,5,http://localhost:3000/api/dashboard/admin-metrics,483,0,0
+1781358384818,541,5. GET Admin Metrics,200,OK,Load Test Thread Group 1-4,text,true,,345,558,5,5,http://localhost:3000/api/dashboard/admin-metrics,541,0,0
+1781358384833,585,5. GET Admin Metrics,200,OK,Load Test Thread Group 1-5,text,true,,345,558,5,5,http://localhost:3000/api/dashboard/admin-metrics,585,0,0
+1781358385139,319,6. GET Video Analysis List,200,OK,Load Test Thread Group 1-2,text,true,,394,554,5,5,http://localhost:3000/api/video-analysis/list,319,0,0
+1781358385224,244,6. GET Video Analysis List,200,OK,Load Test Thread Group 1-1,text,true,,394,554,5,5,http://localhost:3000/api/video-analysis/list,243,0,0
+1781358385302,166,6. GET Video Analysis List,200,OK,Load Test Thread Group 1-3,text,true,,394,554,5,5,http://localhost:3000/api/video-analysis/list,166,0,0
+1781358385362,107,6. GET Video Analysis List,200,OK,Load Test Thread Group 1-4,text,true,,394,554,5,5,http://localhost:3000/api/video-analysis/list,107,0,0
+1781358385419,50,6. GET Video Analysis List,200,OK,Load Test Thread Group 1-5,text,true,,394,554,5,5,http://localhost:3000/api/video-analysis/list,50,0,0
+1781358385459,352,7. GET Overall Improvement,200,OK,Load Test Thread Group 1-2,text,true,,1827,564,5,5,http://localhost:3000/api/dashboard/overall-improvement,352,0,0
+1781358385470,344,7. GET Overall Improvement,200,OK,Load Test Thread Group 1-5,text,true,,1827,564,5,5,http://localhost:3000/api/dashboard/overall-improvement,344,0,0
+1781358385469,350,7. GET Overall Improvement,200,OK,Load Test Thread Group 1-1,text,true,,1827,564,5,5,http://localhost:3000/api/dashboard/overall-improvement,350,0,0
+1781358385469,493,7. GET Overall Improvement,200,OK,Load Test Thread Group 1-4,text,true,,1827,564,2,2,http://localhost:3000/api/dashboard/overall-improvement,493,0,0
+1781358385469,500,7. GET Overall Improvement,200,OK,Load Test Thread Group 1-3,text,true,,1827,564,1,1,http://localhost:3000/api/dashboard/overall-improvement,500,0,0
